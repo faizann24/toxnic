@@ -45,7 +45,7 @@ If you want to modify this extension, here are a couple of things you might want
 - **Deep Learning Model** - Currently, a CNN is used for text classification which is hosted on faizanahmad.tech. One can use a different model trained on a different data set by replacing the model in the toxnic.js file and replacing the vocab.js file in the root directory with new vocabulary.
 ```javascript
 //toxnic.js
-[18]const loadModel = async () => {
+[18] const loadModel = async () => {
     console.log("Loading model...");
     const url = 'https://faizanahmad.tech/model2/model.json';
     const _model = await tf.loadLayersModel(url);
@@ -53,3 +53,8 @@ If you want to modify this extension, here are a couple of things you might want
 };
 ```
 In order to convert tensorflow and keras models to tensorflow js, there is a nice guide on the [tensorflow website](https://www.tensorflow.org/js/guide/conversion)
+
+## License
+[![MIT](https://img.shields.io/cocoapods/l/AFNetworking.svg?style=style&label=License&maxAge=2592000)](LICENSE)
+
+Copyright (c) 2020-present, Faizan Ahmad
