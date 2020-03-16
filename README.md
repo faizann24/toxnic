@@ -28,3 +28,9 @@ Toxnic encompasses a deep learning convolutional neural network (CNN) model that
 
 #### 1. Deep Learning Model
 Using the [toxic content](https://www.kaggle.com/c/jigsaw-toxic-comment-classification-challenge/data) data set, a simple CNN model is trained for text classification. It contains two convolutional layers followed by a max pooling layer which is finally used with 2 dense layers for classification. The vocabulary for the model is created by removing all words that appear less than 10 times in the data set. This gives us a set of almost 2k words in the vocabulary which are given in vocab.js. The pre-trained models are hosted on faizanahmad.tech.
+
+#### 2. Browser Extension
+Once the deep learning model is trained, it is converted into a format that can be used with [Tensorflow Js](https://www.tensorflow.org/js). The model is loaded into the content script which applies it on every textual content on the website. Right now, the extension works on the following websites:
+- Facebook (Posts, Comments)
+- Twitter (Tweets, Comments)
+- Youtube (Comments)
