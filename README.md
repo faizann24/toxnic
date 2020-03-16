@@ -37,8 +37,19 @@ Once the deep learning model is trained, it is converted into a format that can 
 
 ## Modifying Extension
 If you want to modify this extension, here are a couple of things you might want to try.
-- Threshold Value - Right now, a threshold value of 0.7 is used for toxic content classification. If the probability that the content is toxic is above 0.7, it is filtered from the page. You can try changing this value to get different filtering results.
+- **Threshold Value** - Right now, a threshold value of 0.7 is used for toxic content classification. If the probability that the content is toxic is above 0.7, it is filtered from the page. You can try changing this value to get different filtering results.
 ```javascript
 //toxnic.js
 [2] let THRESHOLD = 0.7;
 ```
+- **Deep Learning Model** - Currently, a CNN is used for text classification which is hosted on faizanahmad.tech. One can use a different model trained on a different data set by replacing the model in the toxnic.js file and replacing the vocab.js file in the root directory with new vocabulary.
+```javascript
+//toxnic.js
+[18]const loadModel = async () => {
+    console.log("Loading model...");
+    const url = 'https://faizanahmad.tech/model2/model.json';
+    const _model = await tf.loadLayersModel(url);
+    return _model;
+};
+```
+In order to convert tensorflow and keras models to tensorflow js, there is a nice guide on the [tensorflow website](https://www.tensorflow.org/js/guide/conversion)
