@@ -1,2 +1,2 @@
-# toxnic
-No more hateful content on the internet!
+# Toxnic - Hate Free Internet
+Using deep learning to remove toxic content from the internet.
