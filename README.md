@@ -34,3 +34,10 @@ Once the deep learning model is trained, it is converted into a format that can 
 - Facebook (Posts, Comments)
 - Twitter (Tweets, Comments)
 - Youtube (Comments)
+
+## Modifying Extension
+If you want to modify this extension, here are a couple of things you might want to try.
+- Threshold Value - Right now, a threshold value of 0.7 is used for toxic content classification. If the probability that the content is toxic is above 0.7, it is filtered from the page. You can try changing this value to get different filtering results.
+```javascript
+let THRESHOLD = 0.7;
+```
