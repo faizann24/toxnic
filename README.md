@@ -9,7 +9,7 @@
 
 Toxnic analyzes content on social media platforms and uses deep learning to block out the toxic posts and comments.
 
-### Files Description
+## Files Description
 | Path | Description
 | :--- | :----------
 | toxnic | Main folder.
@@ -24,4 +24,7 @@ Toxnic analyzes content on social media platforms and uses deep learning to bloc
 | &boxvr;&nbsp; vocabs.js | Vocabulary file for the deep learning model. It contains mapping from words to ids.
 
 ## How it works
-Toxnic encompasses a deep learning convolutional neural network model that is trained on a large [toxic content classification](https://www.kaggle.com/c/jigsaw-toxic-comment-classification-challenge/data) data set for classifying textual content into toxic/non-toxic categories. The model achieves an accuracy of 93% on the held out test set.
+Toxnic encompasses a deep learning convolutional neural network (CNN) model that is trained on a large [toxic content classification](https://www.kaggle.com/c/jigsaw-toxic-comment-classification-challenge/data) data set for classifying textual content into toxic/non-toxic categories. The model achieves an accuracy of 93% on the held out test set.
+
+#### 1. Deep Learning Model
+Using the [toxic content](https://www.kaggle.com/c/jigsaw-toxic-comment-classification-challenge/data) data set, a simple CNN model is trained for text classification. It contains two convolutional layers followed by a max pooling layer which is finally used with 2 dense layers for classification. The vocabulary for the model is created by removing all words that appear less than 10 times in the data set. This gives us a set of almost 2k words in the vocabulary which are given in vocab.js. The pre-trained models are hosted on faizanahmad.tech.
